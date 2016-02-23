@@ -41,12 +41,20 @@ public class NamedAdjacencyMapGraph<V,E> extends AdjacencyMapGraph<V,E> {
   		else
   			throw new IllegalArgumentException("Duplicate vertex name");
   }
-	//added
+	/**
+	 * returnElement takes a vertex and returns the element associated with that vertex
+	 * @param vertex the vertex to be examined
+	 * @return the element in that vertex
+	 */
     public V returnElement(Vertex<V> vertex){
         return vertex.getElement();
     }
 
-	//added
+	/**
+	 * Takes an edge and returns the data present in the edge
+	 * @param edge is the edge to be examined
+	 * @return the data element of the edge
+	 */
 	public E returnEdge(Edge<E> edge){
 		return edge.getElement();
 	}
