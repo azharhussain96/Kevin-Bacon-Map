@@ -4,7 +4,7 @@ import java.util.*;
 
 
 /**
- * Created by azharhussain on 2/18/16.
+ * Created by azharhussain and Alec Cobban on 2/18/16.
  */
 public class KevinBacon {
 
@@ -160,7 +160,9 @@ public class KevinBacon {
             Edge<String> nextEdge = outgoingEdgesList.next(); //grab the next edge in the list (first edge)
             baconPathTemp += currentVertex.getElement() + " appeared in " + nextEdge.getElement() + " with " + 
             		directedBaconMap.opposite(currentVertex, nextEdge).getElement() + ". \n"; // add the link in the list of connections to the string
+            
             currentVertex = directedBaconMap.opposite(currentVertex, nextEdge); //grab the next vertex and call it current
+            
             outgoingEdgesList = directedBaconMap.outgoingEdges(currentVertex).iterator(); //get the next vertex's outgoing (only toward root)
         }
 
